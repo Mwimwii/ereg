@@ -2,7 +2,7 @@
 <html lang="en-gb">
 
 <head>
-    <title>Create a Memo</title>
+    <title>Edit: {Get title from memo}? | Memos</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb text-uppercase">
                             <li class="text-white breadcrumb-item"><a href="#" class="text-white">Home</a></li>
-                            <li class="text-white breadcrumb-item"><a href="#" class="text-white">Create Memo</a></li>
+                            <li class="text-white breadcrumb-item"><a href="#" class="text-white">Edit Memo</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -96,7 +96,7 @@
 
         <div id="form-container" class="column-md-5">
             <form class="my-form border border-light p-5">
-                <p class="h4 mb-4 text-center">Create a memo</p>
+                <p class="h4 mb-4 text-center">Edit memo</p>
                 <label for="memo-title">Memo Title</label>
                 <input type="text" id="memo-title" class="form-control mb-4" placeholder="Title">
                 <label for="memo-institution">Source Institution</label>
@@ -122,6 +122,12 @@
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
                 </select>
+
+                <label for="memo-files">Memo documents</label>
+                <div id="memo-files" class="form-control mb-4">
+                    <!--TODO: find a way to show files list and-->
+                </div>
+                
                 <!--File upload-->
                 <div id="drop-area">
                     <p>Drag supporting documents here to upload</p>
