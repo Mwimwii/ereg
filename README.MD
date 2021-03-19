@@ -2,4 +2,5 @@
 This is the development repository of the
 ## Registry Officers
 
-    - Create a 
+    - Create a registry officer page:
+      - 
