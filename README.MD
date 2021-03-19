@@ -2,4 +2,5 @@
 
 ## Registry Officers
 
-    - Create a 
+    - Create a registry officer page:
+      - 
