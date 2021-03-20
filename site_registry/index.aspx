@@ -1,4 +1,4 @@
-<!DOCTYPE aspx>
+<!DOCTYPE HTML>
 <aspx lang="en">
 <head>
     <meta charset="UTF-8">
