@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE aspx>
+<aspx lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
  <nav style="background: whitesmoke;"class="mb-1 navbar navbar-expand-lg navbar-light lighten-1 sticky-top">
     
     <!-- NavBarLogo -->
-    <a class="navbar-brand" href="index_s.html"><img src="../img/ZM_Coat_of_Arms.png"  height="50"></a>
+    <a class="navbar-brand" href="index_s.aspx"><img src="../img/ZM_Coat_of_Arms.png"  height="50"></a>
     <!--./NavBarLogo -->
     
     <!-- NavBarTitle -->
@@ -41,13 +41,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item ">
-          <a class="nav-link " aria-current="page" href="index.html">HOME</a>
+          <a class="nav-link " aria-current="page" href="index.aspx">HOME</a>
         </li>                 
         <li class="nav-item ">
-          <a class="nav-link " aria-current="page"  href="memos_view.html">MEMOS</a>
+          <a class="nav-link " aria-current="page"  href="memos_view.aspx">MEMOS</a>
         </li>                 
         <li class="nav-item ">
-        <a class="nav-link active" aria-current="page" href="memos_create.html">CREATE MEMOS</a>
+        <a class="nav-link active" aria-current="page" href="memos_create.aspx">CREATE MEMOS</a>
       </li>                 
       </ul>
     </div>
@@ -115,4 +115,4 @@
   <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
   <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
 </body>
-</html>
+</aspx>
