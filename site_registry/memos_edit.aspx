@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/crudmemo.css" />
     <link rel="stylesheet" href="css/main.css">
     <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../css/all.min.css" rel="stylesheet" />
+    <link href='../css/boxicons.min.css' rel='stylesheet'>
     <!-- Lib -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/datatables.min.css"> -->
@@ -90,9 +90,9 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/mdb.min.js"></script>
         <script src="js/memos_table.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
-        <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
-        <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+        <script src='../js/jquery.dataTables.min.js'></script>
+        <script src='../js/dataTables.responsive.min.js'></script>
+        <script src='../js/dataTables.bootstrap4.min.js'></script>
 
         <div id="form-container" class="column-md-5">
             <form class="my-form border border-light p-5">
@@ -142,7 +142,7 @@
         </div>
 
         <footer></footer>
-        <script src="./js/crud_memo.js"></script>
+        <script src="../js/crud_memo.js"></script>
 </body>
 
 </html>
