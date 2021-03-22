@@ -9,7 +9,7 @@
         <!-- page icon -->
         <link rel="icon" href="../img/ZM_Coat_of_Arms.png" type="image/png">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link rel="stylesheet" href="../css/all.css">
        
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
