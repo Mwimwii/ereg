@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registry Officer - Home</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../css/all.min.css" rel="stylesheet"/>
+    <link href='../css/boxicons.min.css' rel='stylesheet'>
     
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -111,8 +111,8 @@
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/mdb.min.js"></script>
   <script src="../js/popper.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
-  <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
-  <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+  <script src='../js/jquery.dataTables.min.js'></script>
+  <script src='../js/dataTables.responsive.min.js'></script>
+  <script src='../js/dataTables.bootstrap4.min.js'></script>
 </body>
 </aspx>
