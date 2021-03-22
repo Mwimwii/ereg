@@ -46,6 +46,10 @@ body {
   #fileElem {
     display: none;
   }
+  #upload-errors{
+    color: #ff0000f0;
+    font-weight: bold;
+  }
   #progress-bar {
       width: 90%;
   }
