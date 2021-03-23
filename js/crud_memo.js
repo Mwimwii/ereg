@@ -3,6 +3,7 @@
 let dropArea = document.getElementById("drop-area")
 let uploadProgress = []
 let progressBar = document.getElementById('progress-bar')
+const supportedFileTypes = ".gdoc,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,image/*,.odt,.docm,.dot,.dotx,.dotm,.txt,.xps,.rtf,.ods,.xls,.xlsx,.xlsm,.xlt,.xltx,.xltm,.ppt,.pptx,.pptm,.pps,.ppsx,.ppsm,.pot,.potx,.potm,.epub,.mobi"
 
     // Prevent default drag behaviors
     ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -43,7 +44,7 @@ function unhighlight(e) {
 // handle droping of files
 function handleDrop(e) {
     let dt = e.dataTransfer
-    var files = dt.files
+    let files = dt.files
     unhideProgress()
     handleFiles(files)
 }
@@ -76,10 +77,31 @@ function updateProgress(fileNumber, percent) {
 }
 
 function handleFiles(files) {
-    files = [...files]
+    files = checkFiles([...files])
     initializeProgress(files.length)
     files.forEach(uploadFile)
     files.forEach(previewFile)
+}
+
+function checkFiles(files){
+    let cleanFiles = []
+    for (let file of files){
+        let extension = getFileExtension(file.name)
+        if (supportedFileTypes.includes(extension) | file['type'].includes('image') && Boolean(extension)) {
+            cleanFiles.push(file)
+        } else {
+            document.getElementById("upload-errors").classList.remove("visually-hidden")
+            let ignoredFiles = document.getElementById("ignored-files"); // get the list to append the files to
+            let li = document.createElement("li")
+            li.appendChild(document.createTextNode(file.name))
+            ignoredFiles.appendChild(li) // make list of unsupported files
+        }
+    }
+    return cleanFiles
+}
+
+function getFileExtension(fileName){
+    return fileName.slice((fileName.lastIndexOf(".") -1 >>> 0) + 2);
 }
 
 function previewFile(file) {

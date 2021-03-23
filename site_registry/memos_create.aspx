@@ -103,8 +103,12 @@
                     <p>Drag supporting documents here to upload</p>
                     <input type="file" id="fileElem" multiple accept=".gdoc,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,image/*,.odt,.docm,.dot,.dotx,.dotm,.txt,.xps,.rtf,.ods,.xls,.xlsx,.xlsm,.xlt,.xltx,.xltm,.ppt,.pptx,.pptm,.pps,.ppsx,.ppsm,.pot,.potx,.potm,.epub,.mobi" onchange="handleFiles(this.files)">
                     <label class="button clear-button waves-effect waves-light" for="fileElem">Click to select documents</label>
-                    <progress id="progress-bar" max=100 value=0 class=".visually-hidden" hidden></progress>
-                    <div id="gallery" class="preview">
+                    <progress id="progress-bar" max=100 value=0 class="visually-hidden" hidden></progress>
+                    <div id="gallery" class="preview"></div>
+                    <div id="upload-errors" class="visually-hidden">
+                        <p><h4>You can only upload images and documents!!</h4><br/> The following file(s) were ignored:</p>
+                        <ul id="ignored-files">
+                        </ul>
                     </div>
                 </div>
                 <!--./File upload-->
