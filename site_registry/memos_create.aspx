@@ -85,11 +85,12 @@
                 </select>
 
                 <label for="memo-contacts">Contact person(s)</label>
-                <select class="browser-default custom-select mb-4" id="memo-contacts">
+                <select class="mdb-select md-form mb-4" editable="true" searchable="Search or add contact..." id="memo-contacts" onchange="this.nextElementSibling.value=this.value">
                     <option value="" disabled="" selected="">type contact people</option>
-                    <option value="1">John Musonda</option>
-                    <option value="2">Mwale Tembo</option>
-                    <option value="3">Mwiche Sulipwa</option>
+                    <option value="1">John Musonda 0964758654</option>
+                    <option value="2">Mwale Tembo 077556478</option>
+                    <option value="3">Mwiche Sulipwa 0952332458</option>
+                    
                 </select>
                 <label for="memo-classification">Memo Classification</label>
                 <select class="browser-default custom-select mb-4" id="memo-classification">
@@ -97,6 +98,15 @@
                     <option value="1">class 1</option>
                     <option value="2">Type 2</option>
                     <option value="3">Segregation 3c</option>
+                </select>
+                </select>
+                <label for="memo-file">File to place in</label>
+                <select class="browser-default custom-select mb-4" id="memo-file">
+                    <option value="" disabled="" selected="">Select a classification</option>
+                    <option value="1">file 2</option>
+                    <option value="2">file 2/e4</option>
+                    <option value="3">file 34c</option>
+                    <option value="3">None</option>
                 </select>
                 <!--File upload-->
                 <div id="drop-area">
@@ -127,5 +137,11 @@
         <script src='../js/dataTables.responsive.min.js'></script>
         <script src='../js/dataTables.bootstrap4.min.js'></script>
         <script src="../js/browser_detect.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Material Select
+                    $('.mdb-select').materialSelect({});
+                })
+        </script>
     </body>
 </html>
