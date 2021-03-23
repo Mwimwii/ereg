@@ -1,8 +1,10 @@
-// ************************ Drag and drop ***************** //
 // Area drag and drop works on
 let dropArea = document.getElementById("drop-area")
+// progress on files upload
 let uploadProgress = []
+// progress bar for uploads
 let progressBar = document.getElementById('progress-bar')
+// list of supported file types
 const supportedFileTypes = ".gdoc,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,image/*,.odt,.docm,.dot,.dotx,.dotm,.txt,.xps,.rtf,.ods,.xls,.xlsx,.xlsm,.xlt,.xltx,.xltm,.ppt,.pptx,.pptm,.pps,.ppsx,.ppsm,.pot,.potx,.potm,.epub,.mobi"
 
     // Prevent default drag behaviors
@@ -24,6 +26,7 @@ const supportedFileTypes = ".gdoc,.doc,.docx,application/msword,application/vnd.
 // Handle dropped files
 dropArea.addEventListener('drop', handleDrop, false)
 
+// event listener overriding default behaviour
 function preventDefaults(e) {
     e.preventDefault()
     e.stopPropagation()
@@ -60,6 +63,7 @@ function unhideProgress(){
     progressBar.hidden = false
 }
 
+// Initialise the progress bar
 function initializeProgress(numFiles) {
     progressBar.value = 0
     uploadProgress = []
@@ -69,6 +73,7 @@ function initializeProgress(numFiles) {
     }
 }
 
+// update upload progress
 function updateProgress(fileNumber, percent) {
     uploadProgress[fileNumber] = percent
     let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
@@ -76,6 +81,7 @@ function updateProgress(fileNumber, percent) {
     progressBar.value = total
 }
 
+// Handle what happens when files are dropped
 function handleFiles(files) {
     files = checkFiles([...files])
     initializeProgress(files.length)
@@ -83,6 +89,7 @@ function handleFiles(files) {
     files.forEach(previewFile)
 }
 
+// check if uploaded files are supported file types
 function checkFiles(files){
     let cleanFiles = []
     for (let file of files){
@@ -100,10 +107,12 @@ function checkFiles(files){
     return cleanFiles
 }
 
+// get the filetype extension
 function getFileExtension(fileName){
     return fileName.slice((fileName.lastIndexOf(".") -1 >>> 0) + 2);
 }
 
+// preview the uploaded files
 function previewFile(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
@@ -114,6 +123,7 @@ function previewFile(file) {
     }
 }
 
+// upload the files
 function uploadFile(file, i) {
     // TODO: add server url here
     var url = 'url'
